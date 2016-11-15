@@ -44,11 +44,16 @@ public class RAM {
 	 * Delete existing storage by name
 	 * @param name
 	 */
-	public void delete(String name) {
-		MapStorage deleted = map.remove(name);
-		if (deleted.equals(currentStorage)) {
-			currentStorage = null;
-		}
+	public boolean delete(String name) {
+		if (map.containsKey(name)) {
+			map.remove(name);
+			if (currentStorage.name.equals(name)){
+				currentStorage = null;
+			} 
+			return true;
+		} else {
+			return false;
+		}		
 	}
 	
 	/**
@@ -75,6 +80,21 @@ public class RAM {
 		if (currentStorage != null) {
 			return currentStorage.add(data);
 		} else {
+			return false;
+		}
+	}
+	public boolean remove(String[] data) {
+		if (currentStorage != null) {
+			return currentStorage.remove(data);
+		} else {
+			return false;
+		}
+	}
+	public boolean show(String[] data) {
+		if (currentStorage != null) {
+			return currentStorage.show(data);
+			}
+		else {
 			return false;
 		}
 	}
