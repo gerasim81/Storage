@@ -68,7 +68,13 @@ public class Processor {
 			
 			case Commands.REMOVE:
 				if (commandWords.length > 1) {
-					result = Remove.process(ram, commandWords);					
+					if (ram.currentStorage != null){
+						result = Remove.process(ram, commandWords);
+					}
+					else{
+//						result = "Current storege not selected. Please use \"use\" command to select storage. If no storages available use \"create\" command to make one.";
+						result = "There is no selected storage";
+					}
 				} else {
 					result = "Data for remove does not specified correctly";
 				}
@@ -78,8 +84,9 @@ public class Processor {
 					result = Show.process(ram, commandWords);					
 				}
 				else{
-					result = "Current storege not selected. Please use \"use\" command to select storage. If no storages available use \"create\" command to make one.";
-				}
+//					result = "Current storege not selected. Please use \"use\" command to select storage. If no storages available use \"create\" command to make one.";
+					result = "There is no selected storage";
+			}
 				break;
 							
 			case Commands.SHUTDOWN:

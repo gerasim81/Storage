@@ -47,10 +47,12 @@ public class RAM {
 	public boolean delete(String name) {
 		if (map.containsKey(name)) {
 			map.remove(name);
-			if (currentStorage.name.equals(name)){
-				currentStorage = null;
-			} 
-			return true;
+			if (currentStorage != null){
+				if (currentStorage.name.equals(name)){
+					currentStorage = null;
+				}
+			}
+		return true;
 		} else {
 			return false;
 		}		
