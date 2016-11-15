@@ -16,16 +16,16 @@ public class Main {
 		Processor processor = new Processor(ram);
 		Console console = new Console(processor);
 		
-		String result = processor.process("create s1");
-		System.out.println(result);
-		result = processor.process("use s1");
-		System.out.println(result);
-		result = processor.process("add 1 2");
-		System.out.println(result);
-		result = processor.process("add 2 3");
-		System.out.println(result);
-		result = processor.process("add 3 4");
-		System.out.println(result);
+//		String result = processor.process("create s1");
+//		System.out.println(result);
+//		result = processor.process("use s1");
+//		System.out.println(result);
+//		result = processor.process("add 1 2");
+//		System.out.println(result);
+//		result = processor.process("add 2 3");
+//		System.out.println(result);
+//		result = processor.process("add 3 4");
+//		System.out.println(result);
 		
 		console.startListen();
 	}
