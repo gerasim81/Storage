@@ -1,9 +1,11 @@
+Compilyatsiya:
+=============================
+C:\>javac -sourcepath C:\14\Storage\src\main\java -d C:\14\Storage\target\classe
+s C:\14\Storage\src\main\java\com\spoloborota\teaching\storage\main\Main.java
+
+
 Zapusk cherez classpath:
 =============================
-C:\14\Storage\target\classes>java -cp C:\14\Storage\target\classes; com.spoloborota.teaching.storage.main.Main
-
-or
-
 C:\>java -cp C:\14\Storage\target\classes; com.spoloborota.teaching.storage.main.Main
 
 
