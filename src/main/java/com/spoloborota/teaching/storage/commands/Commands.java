@@ -14,7 +14,6 @@ public interface Commands {
 	
 	public final static String ADD = "add";
 	public final static String REMOVE = "remove";
-	public final static String SHOW = "show";
 	public final static String SELECT_ALL = "select all";
 	
 }

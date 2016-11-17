@@ -1,0 +1,45 @@
+Запуск через classpath:
+=============================
+C:\14\Storage\target\classes>java -cp C:\14\Storage\target\classes; com.spoloborota.teaching.storage.main.Main
+или
+C:\>java -cp C:\14\Storage\target\classes; com.spoloborota.teaching.storage.main.Main
+
+
+
+
+
+Создаем jar-файл:
+====================================================
+
+1.
+Запускаем cdm.exe.
+
+2.
+-------"Заходим" туда где лежат классы----
+C:> cd C:\14\Storage\target\classes
+
+3.
+-------Создаем файл MANIFEST.MF---
+copy con MANIFEST.MF
+
+4.
+---Пишем внутри него следующее----
+Main-Class:  путь package + имя класса (все через точки)
+
+---Пример:--------------------
+Main-Class: com.spoloborota.teaching.storage.main.Main
+
+5.
+Нажимаем ENTER!!!!!!!(должно быть две строки: 1.путь к классу 2. пустая после пути к классу)
+Нажимаем F6(для выхода).
+Пишем cls(наверное можно и не писать).
+
+6.
+-------Создаем jar файл------jar----
+C:\14\Storage\target\classes>jar cfm "имя и путь к создаваемому файлу jar" MANIFEST.MF ./
+---Пример:--------------------
+C:\14\Storage\target\classes>jar cfm d:\1.jar MANIFEST.MF ./
+
+7.Пример запуска jar файла:
+
+D:\>java -jar С:\1.jar

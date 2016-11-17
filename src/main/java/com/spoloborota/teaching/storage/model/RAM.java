@@ -92,9 +92,9 @@ public class RAM {
 			return false;
 		}
 	}
-	public boolean show(String[] data) {
+	public boolean list(String[] data) {
 		if (currentStorage != null) {
-			return currentStorage.show(data);
+			return currentStorage.list(data);
 			}
 		else {
 			return false;

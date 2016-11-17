@@ -79,7 +79,7 @@ public class Processor {
 					result = "Data for remove does not specified correctly";
 				}
 				break;
-			case Commands.SHOW:
+			case Commands.LIST:
 				if (ram.currentStorage != null){
 					result = Show.process(ram, commandWords);					
 				}

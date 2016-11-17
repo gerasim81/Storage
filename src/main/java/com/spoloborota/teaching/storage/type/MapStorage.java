@@ -27,7 +27,7 @@ public class MapStorage {
 			return false;
 		}
 	}
-	public boolean show(String[] keyValue) {
+	public boolean list(String[] keyValue) {
 		Iterator<HashMap.Entry<String, String>> iterator = hashMap.entrySet().iterator();
 		System.out.print(name + ":  ");
 		
