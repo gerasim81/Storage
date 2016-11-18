@@ -43,4 +43,4 @@ C:\14\Storage\target\classes>jar cfm d:\1.jar MANIFEST.MF ./
 
 7.Run jar file with java:
 
-D:\>java -jar Ñ:\1.jar
+D:\>java -jar C:\1.jar
