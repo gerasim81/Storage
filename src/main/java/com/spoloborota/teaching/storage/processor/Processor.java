@@ -7,7 +7,7 @@ import com.spoloborota.teaching.storage.processor.type.Delete;
 import com.spoloborota.teaching.storage.processor.type.Remove;
 import com.spoloborota.teaching.storage.processor.type.Create;
 import com.spoloborota.teaching.storage.processor.type.Display;
-import com.spoloborota.teaching.storage.processor.type.Show;
+import com.spoloborota.teaching.storage.processor.type.List;
 import com.spoloborota.teaching.storage.processor.type.Use;
 
 /**
@@ -72,7 +72,6 @@ public class Processor {
 						result = Remove.process(ram, commandWords);
 					}
 					else{
-//						result = "Current storege not selected. Please use \"use\" command to select storage. If no storages available use \"create\" command to make one.";
 						result = "There is no selected storage";
 					}
 				} else {
@@ -81,10 +80,9 @@ public class Processor {
 				break;
 			case Commands.LIST:
 				if (ram.currentStorage != null){
-					result = Show.process(ram, commandWords);					
+					result = List.process(ram, commandWords) + "\n" + "Data listed" + "\n";					
 				}
 				else{
-//					result = "Current storege not selected. Please use \"use\" command to select storage. If no storages available use \"create\" command to make one.";
 					result = "There is no selected storage";
 			}
 				break;

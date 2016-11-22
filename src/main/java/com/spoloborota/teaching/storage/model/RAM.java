@@ -85,19 +85,21 @@ public class RAM {
 			return false;
 		}
 	}
-	public boolean remove(String[] data) {
+	
+	public String remove(String[] data) {
 		if (currentStorage != null) {
 			return currentStorage.remove(data);
 		} else {
-			return false;
+			return null;
 		}
 	}
-	public boolean list(String[] data) {
+	
+	public String list(String[] data) {
 		if (currentStorage != null) {
 			return currentStorage.list(data);
 			}
 		else {
-			return false;
+			return null;
 		}
 	}
 }

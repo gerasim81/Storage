@@ -18,29 +18,24 @@ public class MapStorage {
 		hashMap.put(keyValue[0], keyValue[1]);
 		return true;
 	}
-	public boolean remove(String[] keyValue) {
-		if (hashMap.containsKey(keyValue[0])){
-			hashMap.remove(keyValue[0]);
-			return true;
-		}
-		else {
-			return false;
-		}
+
+	public String remove(String[] keyValue) {
+		return hashMap.remove(keyValue[0]);
 	}
-	public boolean list(String[] keyValue) {
+
+	public String list(String[] keyValue) {
 		Iterator<HashMap.Entry<String, String>> iterator = hashMap.entrySet().iterator();
-		System.out.print(name + ":  ");
-		
+		String s1 = "Repository " + name + ": {";
+
 		while (iterator.hasNext())
 		{
-			//получение «пары» элементов
 			HashMap.Entry<String, String> pair = iterator.next();
-			String key = pair.getKey();            //ключ
-			String value = pair.getValue();        //значение
-			System.out.print(key + " = " + value + "   ");
+			String key = pair.getKey();
+			String value = pair.getValue();
+			s1 = s1 + key + "=" + value + " ";
+			
 		}
-		System.out.println();
-		
-		return true;
+		s1 = s1 + "\b}";
+		return s1;
 	}
 }
