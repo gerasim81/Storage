@@ -26,6 +26,7 @@ public class MapStorage {
 	public String list(String[] keyValue) {
 		Iterator<HashMap.Entry<String, String>> iterator = hashMap.entrySet().iterator();
 		String s1 = "Repository " + name + ": {";
+		String s2 = new String(s1);
 
 		while (iterator.hasNext())
 		{
@@ -35,7 +36,13 @@ public class MapStorage {
 			s1 = s1 + key + "=" + value + " ";
 			
 		}
-		s1 = s1 + "\b}";
+		if (!s1.equals(s2)){
+			s1 = s1 + "\b}";
+		}
+		else{
+			s1 = s1 + "}";
+		}
+				
 		return s1;
 	}
 }
